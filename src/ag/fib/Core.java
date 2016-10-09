@@ -6,11 +6,11 @@ public class Core {
 		ControlEngine controlEngine = new ControlEngine();
 		int limit;
 
-		limit = 500000;
-		controlEngine.start(new Fibbonacci(1), new PrimeNumber(), limit);
-
 //		limit = 500000;
-//		controlEngine.start(new Fibbonacci(9), new PrimeNumber(), limit);
+//		controlEngine.control1(new Fibbonacci(1), new PrimeNumber(), limit);//a
+
+		limit = 500000;
+		controlEngine.control1(new Fibbonacci(9), new PrimeNumber(), limit);//b
 
 	}
 

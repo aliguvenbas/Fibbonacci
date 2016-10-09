@@ -4,7 +4,7 @@ public class ControlEngine {
 
 	private boolean noBiggestPrimeNumber, noSmallestPrimeNumber;
 
-	public void start(Fibbonacci fibbonacci, PrimeNumber primeNumber, int limit) {
+	public void control1(Fibbonacci fibbonacci, PrimeNumber primeNumber, int limit) {
 		int biggestPrimeNumberLessThanLimit = -1, smallestPrimeNumberBiggerThanLimit = -1;
 
 		while (true) {
@@ -35,6 +35,13 @@ public class ControlEngine {
 			System.out.println(limit + " den büyük en küçük asal sayý hesaplanamadý");
 		} else {
 			System.out.println(limit + " den büyük en küçük asal sayý:" + smallestPrimeNumberBiggerThanLimit);
+		}
+		
+		if(noBiggestPrimeNumber || noSmallestPrimeNumber){
+			System.out.println(" Asal sayý farký hesaplanamadý");
+		} else {
+			int result=smallestPrimeNumberBiggerThanLimit - biggestPrimeNumberLessThanLimit;
+			System.out.println(" Asal sayý farký:"+result);
 		}
 
 	}
